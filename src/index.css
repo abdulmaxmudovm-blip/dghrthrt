@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-cosmic-bg: #020617;
+  --color-cosmic-accent: #22d3ee;
+  --color-cosmic-secondary: #0891b2;
+}
+
+@layer base {
+  body {
+    @apply bg-cosmic-bg text-white font-sans overflow-hidden;
+  }
+}
+
+.cosmic-grid {
+  background-image: 
+    linear-gradient(#334155 1px, transparent 1px), 
+    linear-gradient(90deg, #334155 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.cosmic-gradient {
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(34, 211, 238, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(34, 211, 238, 0.05) 0%, transparent 50%);
+}
+
+.glass-panel {
+  @apply backdrop-blur-sm bg-white/5 border border-white/10;
+}
